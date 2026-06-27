@@ -29,8 +29,8 @@ img {
     height: auto;
     border: 1px solid #666; 
     /* 圖片陰影加深，增加立體感 */
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
-    background-color: #fff; /* 圖片若有透明處補白底 */
+    /*box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    /*background-color: #fff; /* 圖片若有透明處補白底 */
 }
 
 h4 {
@@ -199,4 +199,15 @@ footer a:hover {
     background-color: #ffffff;
     object-fit: contain;   /* 工程圖保持完整比例 */
     height: 600px;         /* 可自行調整 */
+}
+
+/* Custom CSS */
+.img-zoom-container a img {
+  transition: transform 0.3s ease; /* Makes the scaling smooth */
+  display: inline-block;            /* Ensures transform works properly */
+}
+
+/* Hover state */
+.img-zoom-container a:hover img {
+  transform: scale(1.05);          /* Increases size by exactly 10% */
 }
