@@ -31,6 +31,7 @@
 
 				<form id="form" action="https://api.web3forms.com/submit" method="POST">
 
+				
 					<!-- Web3Forms Access Key -->
 					<input type="hidden" name="access_key" value="f7dd8224-f2fb-4c40-9c6c-c8bb26236e9e">
 
@@ -72,10 +73,14 @@
 							placeholder="Type your question here..."
 							required></textarea>
 					</div>
+					<!-- hCaptcha Checkbox Container Element -->
+					<div class="h-captcha mb-3" data-captcha="true"></div>
+					<script src="https://web3forms.com/client/script.js" async defer></script>
+
 
 					<!-- Submit Button -->
 					<div class="text-center">
-						<button type="submit" class="btn btn-primary px-4">
+						<button type="submit" class="btn btn-primary px-4 px-5 py-2 fw-bold">
 							Submit
 						</button>
 					</div>
