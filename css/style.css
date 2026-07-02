@@ -33,6 +33,16 @@ img {
     /*background-color: #fff; /* 圖片若有透明處補白底 */
 }
 
+/*Prevent Image Copying*/
+img {
+  -webkit-touch-callout: none; /* Disables long-press menu on iOS */
+  -webkit-user-select: none;   /* Safari */
+  user-select: none;           /* Standard syntax to block text/image selection */
+  pointer-events: none;        /* Blocks all mouse click and drag events */
+}
+
+
+
 h4 {
     text-align: justify; 
     width: 95%; 
@@ -124,6 +134,7 @@ h2 strong {
     color: #ffffff !important;
     background-color: #333333 !important;
 }
+
 }	
 
 /* Footer */
@@ -173,14 +184,14 @@ footer a:hover {
 .carousel-control-prev,
 .carousel-control-next{
     width: 60px;
-    background-color: #efefef;
+    background-color: #fff;
     opacity: 0.9;
 }
 
 /* 滑鼠移上去 */
 .carousel-control-prev:hover,
 .carousel-control-next:hover{
-    background-color: #dcdcdc;
+    background-color: #efefef;
     opacity: 1;
 }
 
@@ -210,4 +221,50 @@ footer a:hover {
 /* Hover state */
 .img-zoom-container a:hover img {
   transform: scale(1.05);          /* Increases size by exactly 10% */
+}
+
+/* 設定具有說明文字的樣式 */
+.tooltip-text {
+    position: relative;
+    cursor: help; /* 滑鼠游標變成問號 */
+    color: #0066cc; /* 連結顏色 */
+    border-bottom: 1px dotted #0066cc; /* 底下虛線表示可點擊或懸停 */
+}
+
+/* 當滑鼠懸停或點擊時顯示方框 */
+.tooltip-text .tooltip-box {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%; /* 將方框置於文字上方 */
+    left: 50%;
+    transform: translateX(-50%); /* 水平置中對齊 */
+    white-space: nowrap;
+    
+    /* 動態效果：淡入 */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* 顯示方框的觸發條件 (此處設定為 hover) */
+.tooltip-text:hover .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 說明方框的小箭頭 */
+.tooltip-text .tooltip-box::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
 }
