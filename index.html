@@ -11,6 +11,20 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
+<script>
+document.querySelectorAll('img').forEach(img => {
+  // Disable right-click context menu
+  img.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+  });
+
+  // Disable dragging the image to the desktop
+  img.addEventListener('dragstart', (e) => {
+    e.preventDefault();
+  });
+});
+</script>
+
 </head>
 <body>
 <div class="container text-center">
@@ -21,33 +35,33 @@
     <!-- 內容區塊 -->
     <section class="section-content py-5 mt-3">
 
-    	<h2 class="mb-4"><strong>En-Mesh – A Mesh Generation Package for Computational Mechanics</strong></h2>
+		<h2 class="mb-4"><strong>En-Mesh – A Mesh Generation Package for Computational Mechanics</strong></h2>
         
         <!-- 圖片容器：加一點 padding 讓圖片像是在圖紙上 -->
-        <div class="bg-transparent p-2 d-inline-block rounded shadow-sm border-2 me-5 ms-5">
-            <img src="./images/logowithtexas.png" style="width:600px;" alt="EnMesh" class="img-fluid border-0"> <br>
+        <div class="bg-transparent p-2 d-inline-block rounded shadow-sm border-2 mx-auto text-center">
+            <img src="./images/logowithtexas.png" style="width:600px;" alt="En-Mesh" class="img-fluid border-0"> <br>
 			<div class="img-zoom-container overflow-hidden rounded m-auto">
 				<a href="enmeshgun.html">
-				<img src="./images/thumbgun.png" style="width:11%;" alt="Gun Barrel" class="img-fluid rounded-pill border border-dark border-2"></a> &emsp;
+				<img src="./images/thumbgun.png" style="width:12%;" alt="Gun Barrel" class="img-fluid rounded-pill border border-primary border-4"></a> &emsp;
 
 				<a href="enmeshrocket.html">
-				<img src="./images/thumbrocket.png" style="width:11%;" alt="Rocket Nozzle" class="img-fluid rounded-pill border border-dark border-2"></a> &emsp;
+				<img src="./images/thumbrocket.png" style="width:12%;" alt="Rocket Nozzle" class="img-fluid rounded-pill border border-primary border-4"></a> &emsp;
 				
 				<a href="enmeshspring.html">
-				<img src="./images/thumbspring.png" style="width:11%;" alt="Spring" class="img-fluid rounded-pill border border-dark border-2"></a>  &emsp;	
+				<img src="./images/thumbspring.png" style="width:12%;" alt="Spring" class="img-fluid rounded-pill border border-primary border-4"></a>  &emsp;	
 				
 				<a href="enmeshtire.html">
-				<img src="./images/thumbtire.png" style="width:11%;" alt="Tire" class="img-fluid rounded-pill border border-dark border-2"></a>&emsp;
+				<img src="./images/thumbtire.png" style="width:12%;" alt="Tire" class="img-fluid rounded-pill border border-primary border-4"></a>&emsp;
 				
 				<a href="enmeshairfoil.html">
-				<img src="./images/thumbairfoil.png" style="width:11%;" alt="Airfoil" class="img-fluid rounded-pill border border-dark border-3"></a>
+				<img src="./images/thumbairfoil.png" style="width:12%;" alt="Airfoil" class="img-fluid rounded-pill border primary-primary border-4"></a>
 			</div>
         </div>
 
         <div class="mt-4 text-dark" style="font-weight: 500;">
             <!-- 這裡可以放置簡短介紹，加粗字體以對抗透明背景 -->
-			<h2>Under construction with more updates coming</h2><br>
-            <p>Innovative Grid Generation & Topological Analysis.</p>
+            <p>Innovative Grid Generation & Topological Analysis.</p><br>
+			<h2><b>Under construction with more updates coming</h2></b>
         </div>
     </section>
 

@@ -1,17 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5ERXRRFLJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q5ERXRRFLJ');
-</script>
-<!-- End of Google Analytics tag  -->
-	
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="keywords" content="htmlcss bootstrap menu, navbar, hover nav menu CSS examples" />
@@ -25,43 +14,20 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<script>
+document.querySelectorAll('img').forEach(img => {
+  // Disable right-click context menu
+  img.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+  });
 
-<style type="text/css">
-img {
-  max-width: 100%;
-  height: auto;
-}
+  // Disable dragging the image to the desktop
+  img.addEventListener('dragstart', (e) => {
+    e.preventDefault();
+  });
+});
+</script>
 
-/* 連結按鈕樣式 */
-	#backToTop {
-		position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: none; /* 預設隱藏 */
-        font-size: 16px;
-        text-decoration: none;
-        background-color: #ababab;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: opacity 0.3s;
-    }
-
-        #backToTop:hover {
-            background-color: #777;
-			font-weight:bold;
-        }
-		
-/* ============ desktop view ============ */
-@media all and (min-width: 992px) {
-	.navbar .nav-item .dropdown-menu{ display: none; }
-	.navbar .nav-item:hover .nav-link{   }
-	.navbar .nav-item:hover .dropdown-menu{ display: block; }
-	.navbar .nav-item .dropdown-menu{ margin-top:0; }
-}	
-/* ============ desktop view .end// ============ */
-
-</style>
 </head>
 <body>
 

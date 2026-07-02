@@ -13,6 +13,20 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
 
+<script>
+document.querySelectorAll('img').forEach(img => {
+  // Disable right-click context menu
+  img.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+  });
+
+  // Disable dragging the image to the desktop
+  img.addEventListener('dragstart', (e) => {
+    e.preventDefault();
+  });
+});
+</script>
+
 </head>
 <body>
 
