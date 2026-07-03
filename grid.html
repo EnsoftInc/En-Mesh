@@ -85,14 +85,8 @@ document.querySelectorAll('img').forEach(img => {
         });
     </script>
 	
-<footer align="center" >
-     <p>&copy; 2025 Ensoft Inc. All Rights Reserved.</p> 
-     <i class="fa fa-building fa-fw w3-margin-right w3-large w3-text-teal"></i><font size="2pt"><b>3003 W. Howard Lane Austin, TX 78728&nbsp;&nbsp;| 
-     <i class="fa fa-clock-o fa-fw w3-margin-right w3-large w3-text-teal"></i>9:00am-5:00m(CDT)&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-     <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:sales@ensoftinc.com?subject=Interesting%20in%20HOMesh">sales@ensoftinc.com</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-     <i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1(512)244-6464 ext 1&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-     <i class="fa fa-fax fa-fw w3-margin-right w3-large w3-text-teal"></i>1(512)244-6067</font></b>
-</footer>
+<!-- footer -->
+<div id="footer-container"></div>
 
 <!-- header.html)-->
 <script>
@@ -116,5 +110,26 @@ document.querySelectorAll('img').forEach(img => {
     });
 </script>
 
+<!-- footer.html)-->
+<script>
+  // 獲取外部檔案的內容
+  fetch('footer.html')
+    .then(response => {
+      // 確保回應成功
+      if (!response.ok) {
+        throw new Error('無法載入檔案');
+      }
+      // 將回應解析為純文字
+      return response.text();
+    })
+    .then(htmlText => {
+      // 找到容器元素並將獲取的 HTML 文字設定為其內容
+      document.getElementById('footer-container').innerHTML = htmlText;
+    })
+    .catch(error => {
+      console.error('載入內容時出錯:', error);
+      document.getElementById('footer-container').innerHTML = '<p>載入內容失敗。</p>';
+    });
+</script>
 </body>
 </html>
