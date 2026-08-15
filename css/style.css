@@ -268,3 +268,180 @@ footer a:hover {
     border-style: solid;
     border-color: #333 transparent transparent transparent;
 }
+
+/* =========================
+   En-Mesh Main Container
+   ========================= */
+
+.enmesh-container {
+    max-width: 100%;
+}
+
+
+/* =========================
+   Logo
+   ========================= */
+
+.enmesh-logo {
+    width: 600px;
+    max-width: 95vw;
+}
+
+
+/* =========================
+   Icon Row
+   ========================= */
+
+.enmesh-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 12px auto 0;
+    padding: 0 5px;
+
+    gap: 12px;
+}
+
+
+/* Each icon link */
+.enmesh-icons a {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Icon image */
+.enmesh-icon {
+    width: 80px;
+    height: 80px;
+
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-width: 4px !important;
+}
+
+
+/* =========================
+   Tablet
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .enmesh-logo {
+        width: 500px;
+        max-width: 92vw;
+    }
+
+    .enmesh-icons {
+        gap: 8px;
+        padding: 0 4px;
+    }
+
+    .enmesh-icon {
+        width: 65px;
+        height: 65px;
+        border-width: 3px !important;
+    }
+}
+
+/* En-Mesh 外框 */
+.enmesh-container {
+    max-width: 100%;
+}
+
+/* Logo */
+.enmesh-logo {
+    width: 600px;
+    max-width: 90vw;
+}
+
+/* Icon container */
+.enmesh-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Icon */
+.enmesh-icons a {
+    display: block;
+    flex: 0 0 auto;
+}
+
+.enmesh-icons img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ===== Tablet ===== */
+@media (max-width: 768px) {
+
+    .enmesh-logo {
+        width: 500px;
+        max-width: 90vw;
+    }
+
+    .enmesh-icons {
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .enmesh-icons img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+/* ===== Mobile ===== */
+@media (max-width: 576px) {
+
+    .enmesh-container {
+        width: 100%;
+        padding: 8px !important;
+    }
+
+    .enmesh-logo {
+        width: 100%;
+        max-width: 95vw;
+    }
+
+    .enmesh-icons {
+        gap: 8px;
+        padding: 5px 2px;
+    }
+
+    .enmesh-icons img {
+        width: 55px;
+        height: 55px;
+        border-width: 3px !important;
+    }
+}
+
+
+/* ===== Small Mobile ===== */
+@media (max-width: 400px) {
+
+    .enmesh-icons {
+        gap: 6px;
+    }
+
+    .enmesh-icons img {
+        width: 48px;
+        height: 48px;
+    }
+}
